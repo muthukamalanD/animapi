@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Gogoanime</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: gray;
+      }
+      #row {
+        outline: 2px solid maroon;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1.5fr ;
+        border: 1px solid mediumseagreen;
+        padding-top: 0px;
+      }
+      .card {
+        background-color: inherit;
+        padding: 5px;
+        box-shadow: 12px;
+        align-self: stretch;
+        border-radius: 20px;
+        text-align: center;
+      }
+      .card-img-top {
+        width: max-content;
+        height: 40vh;
+        border-radius: 15px;
+        image-resolution: 1080px;
+        cursor: pointer;
+      }
+      .title {
+        color: darkgoldenrod;
+        font-family: cursive;
+      }
+      .topnav {
+        overflow: hidden;
+        background-color:skyblue;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .topnav a,
+      input {
+        float: left;
+        color: whitesmoke;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        background-color: skyblue;
+      }
+
+      .topnav a:hover {
+        color: black;
+      }
+
+      .topnav a.active {
+        background-color: skyblue;
+      }
+      #search i{
+        float: right;
+        width: 300px;
+        align-self: center;
+        font-weight: bold;
+        background-color: skyblue;
+      }
+
+      @media (min-width:600px) {
+        #row {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+        }
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a onclick="window.location.reload(false)" class="active" href="#home"
+        ><i class="fa fa-leaf" aria-hidden="true"></i>Home</a
+      >
+      <a href="https://www.animenewsnetwork.com/" target="_blank">News</a>
+      <a href="https://www1.gogoanime.be/contact/" target="_blank">Contact</a>
+      <a href="https://gogoanime2.org/about"target="_blank" >About</a>
+      <div style="display: inline-block;float:right; padding-right: 10px;">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search...">
+      <i onclick="searchanime()";  class="fa fa-3x fa-search"; aria-hidden="true"></i>
+      </div>
+    </div>
+    <div id="row">
+      <script src="api.js"></script>
+
+    </div>
+    
+  </body>
+</html>
